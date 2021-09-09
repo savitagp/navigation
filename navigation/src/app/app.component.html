@@ -1,0 +1,26 @@
+
+  <ng-sidebar-container>
+  
+  <ng-sidebar [opened] ="opened">
+   <p>sidebar content</p>
+   <button (click) = "toggeledSidebar()"> close sidebar</button>
+   <ul class = "menu"> 
+   <li><a routerLink ="registration" routerLinkActive ="active">user resistration</a></li>
+   <li><a routerLink ="details" routerLinkActive ="active">user details</a></li>
+   </ul>
+</ng-sidebar>
+<div ng-sidebar-content>
+
+<button (click) = "toggeledSidebar()">  
+  open sider
+  </button> 
+  
+  <!-- <nav>
+    <a routerLink="/registration" routerLinkActive="active">registration</a>
+    <br>
+    <a routerLink="/details" routerLinkActive="active">details</a>
+  </nav> -->
+
+  
+
+  <router-outlet></router-outlet>
